@@ -1,0 +1,41 @@
+User,John Doe,123456789,01/01/1990,1234567890,john.doe@gmail.com,john,000111222
+User,Jane Smith,987654321,15/05/1995,9876543210,jane.smith@gmail.com,jane_smith,12345678
+User,Le Duc,0015076899,06/09/2003,0957960043,lelo1@sis.hust.edu.vn,lelo1,leloaloalo
+User,Huynh,0013029292,16/05/2003,0956066677,huynh165@gmail.com,huynh165,RatAnToan
+Staff,Admin1,0076849494,05/12/1985,6543219870,admin1@hust.edu.vn,admin1,admin1,98765,SoICT - HUST,IT Department
+Staff,Admin2,00696969696,25/08/1999,3219876540,admin2@hust.edu.vn,admin2,admin_pass,54321,SEEE - HUST,HR Department
+User,Nguyen Van Minh,0194875629401,01/01/1990,0912345678,nguyenvanminh@gmail.com,nguyenvanminh,111111111
+User,Tran Thi Hoa,0008573089884,02/02/1992,0923456789,tranhoatran@gmail.com,tranhoatran,222222222
+User,Le Van Tuan,001287647595,03/03/1993,0934567890,levantuan@gmail.com,levantuan,333333333
+User,Pham Thi Lan,001874538293,04/04/1994,0945678901,phamthilan@gmail.com,phamthilan,444444444
+User,Vo Van Thanh,008473058361,05/05/1995,0956789012,vovanthanh,11111111,
+User,Nguyen Thi Mai,666666666,06/06/1996,0967890123,nguyenthimai@gmail.com,nguyenthimai,666666666
+User,Tran Van Phong,777777777,07/07/1997,0978901234,tranvanphong@gmail.com,tranvanphong,777777777
+User,Le Thi Thanh,888888888,08/08/1998,0989012345,lethithanh@gmail.com,lethithanh,888888888
+User,Pham Van Quang,999999999,09/09/1999,0990123456,phamvanquang@gmail.com,phamvanquang,999999999
+User,Vo Thi Kim,101010101,10/10/2000,0912345670,vokim@gmail.com,vokim,101010101
+User,Vo Van Hai,555555556,05/05/2005,0956789015,vovanhai@gmail.com,vovanhai,555555556
+User,Nguyen Thi Huong,666666667,06/06/2006,0967890126,nguyenthihuong@gmail.com,nguyenthihuong,666666667
+User,Tran Van Kien,777777778,07/07/2007,0978901237,tranvankien@gmail.com,tranvankien,777777778
+User,Le Thi Lam,888888889,08/08/2008,0989012348,lethilam@gmail.com,lethilam,888888889
+User,Pham Van Nam,999999990,09/09/2009,0990123459,phamvannam@gmail.com,phamvannam,999999990
+User,Vo Van Hai,555555556,05/05/2005,0956789015,vovanhai@gmail.com,vovanhai,555555556
+User,Nguyen Thi Huong,666666667,06/06/2006,0967890126,nguyenthihuong@gmail.com,nguyenthihuong,666666667
+User,Tran Van Kien,777777778,07/07/2007,0978901237,tranvankien@gmail.com,tranvankien,777777778
+User,Le Thi Lam,888888889,08/08/2008,0989012348,lethilam@gmail.com,lethilam,888888889
+User,Pham Van Nam,999999990,09/09/2009,0990123459,phamvannam@gmail.com,phamvannam,999999990
+User,Nguyen duc manh,94854564563,06/06/2005,0876549384,manh@gmail.com,manh2005,1
+Student,Vo Van Hai,555555556,05/05/2005,0956789015,vovanhai@gmail.com,vovanhai,555555556,20250005,IT1,K68,SEEE - HUST
+Student,Nguyen Thi Huong,666666667,06/06/2006,0967890126,nguyenthihuong@gmail.com,nguyenthihuong,666666667,20260006,IT2,K65,SEEE - HUST
+Student,Tran Van Kien,777777778,07/07/2007,0978901237,tranvankien@gmail.com,tranvankien,777777778,20270007,ET1,K66,SEEE - HUST
+Student,Le Thi Lam,888888889,08/08/2008,0989012348,lethilam@gmail.com,lethilam,888888889,20280008,IT1,K69,SEEE - HUST
+Student,Pham Van Nam,999999990,09/09/2009,0990123459,phamvannam@gmail.com,phamvannam,999999990,20290009,IT2,K68,SEEE - HUST
+Student,Vo Thi Oanh,101010102,10/10/2010,0912345672,vooanh@gmail.com,vooanh,101010102,20300010,ET1,K65,SEEE - HUST
+Student,Nguyen Van Phuc,111111113,11/11/2011,0923456783,nguyenvanphuc@gmail.com,nguyenvanphuc,111111113,20310011,IT1,K66,SEEE - HUST
+Student,Tran Thi Quynh,222222224,12/12/2012,0934567894,tranquynh@gmail.com,tranquynh,222222224,20320012,IT2,K69,SEEE - HUST
+Student,Le Van Rong,333333335,01/01/2013,0945678905,levanrong@gmail.com,levanrong,333333335,20330013,ET1,K68,SEEE - HUST
+Student,Pham Thi Sang,444444446,02/02/2014,0956789016,phamthisang@gmail.com,phamthisang,444444446,20340014,IT1,K65,SEEE - HUST
+Student,Vo Van Tho,555555557,03/03/2015,0967890127,vovanho@gmail.com,vovanho,555555557,20350015,IT2,K66,SEEE - HUST
+
+
+
