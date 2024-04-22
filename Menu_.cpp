@@ -20,6 +20,7 @@ void menuAdmin() {
         int x = 75, y = 15;
         int w = 50;
         int h = 2;
+        ShowCur(0);
         showMainMenu(x, y, w, h, choice_a);
         int choice = (whereY() - y) / 2;
         if (choice == 0) {
