@@ -27,5 +27,5 @@ void readfile(vector<Person*>& people);
 
 void readfile(vector<Manga>& list);
 
-void printCapybara();
+void printCapybara(std::string nsd);
 #endif // FILE_HANDLING_H

@@ -281,8 +281,8 @@ void readfile(vector<Manga>& list) {
     save.close();
 }
 
-void printCapybara() {
-    ifstream file("capybara.txt");
+void printCapybara(std::string nsd) {
+    ifstream file(nsd);
     if (file.is_open()) {
         cout << file.rdbuf();
         file.close();

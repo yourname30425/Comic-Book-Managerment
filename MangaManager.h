@@ -16,22 +16,19 @@ public:
     std::string author;
     std::string date;
     double rate;
+    void input(Manga& m);
+    void show(const Manga& m);
+    void showList(const std::vector<Manga>& list, int x, int y, int w, int h, int startIndex, int pageSize);
+    void show_list_i(int x, int y, const Manga& m);
+    void add(std::vector<Manga>& list);
+    void remove(std::vector<Manga>& list);
+    void update(std::vector<Manga>& list);
 };
 
 
 template<typename T>
 void inputNumber(T& i);
-
-
-
-
-void input(Manga& m);
-void show(const Manga& m);
-void showList(const std::vector<Manga>& list, int x, int y, int w, int h, int startIndex,int pageSize);
-void show_list_i(int x, int y, const Manga& m);
-void add(std::vector<Manga>& list);
-void remove(std::vector<Manga>& list);
-void update(std::vector<Manga>& list);
+void inputDouble(double& num);
 
 
 
@@ -41,7 +38,7 @@ void update(std::vector<Manga>& list);
 
 
 
-void search(const std::vector<Manga>& list);
+
 std::vector<Manga> searchbyTag(const std::vector<Manga>& list);
 std::vector<Manga> searchbyName(const std::vector<Manga>& list);
 std::vector<Manga> searchbyAuthor(const std::vector<Manga>& list);

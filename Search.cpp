@@ -37,7 +37,6 @@ std::vector<Manga> searchbyName(const std::vector<Manga>& list) {
     }
 }
 
-
 std::vector<Manga> searchbyTag(const std::vector<Manga>& list) {
     while (true) {
         ShowCur(1);

@@ -2,12 +2,12 @@
 
 
 using namespace std;
-
-
+extern AccountManager ac;
+Manga m;
 void menuAdmin() {
     Staff* st = nullptr;
-    ShowCur(0);
     while (1) {
+        ShowCur(0);
         std::vector<std::string> choice_a = { "All manga titles",
                                                 "Search 3",
                                                 "Add new manga",
@@ -20,26 +20,25 @@ void menuAdmin() {
         int x = 75, y = 15;
         int w = 50;
         int h = 2;
-        ShowCur(0);
-        showMainMenu(x, y, w, h, choice_a);
+        printMenuOptions(x, y, w, h, choice_a);
         int choice = (whereY() - y) / 2;
         if (choice == 0) {
             // Show danh sách
             int startIndex = 0;
             int pageSize = 10;
-            showList(list, 25, 10, 160, 35, startIndex, pageSize);
+            m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
             char keyP;
             keyP = _getch();
             do {
                 if (keyP == 77 && startIndex < list.size()) { // Mui tên ph?i
                     startIndex += pageSize;
-                    clearRectangle(32, 13, 50, 30);
-                    showList(list, 25, 10, 160, 35, startIndex, pageSize);
+                    clearRectangle(26, 13, 154, 20);
+                    m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
                 }
                 else if (keyP == 75 && startIndex > 0) { // Mui tên trái
                     startIndex -= pageSize;
-                    clearRectangle(32, 13, 50, 30);
-                    showList(list, 25, 10, 160, 35, startIndex, pageSize);
+                    clearRectangle(26, 13, 154, 20);
+                    m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
                 }
                 keyP = _getch();
 
@@ -52,14 +51,17 @@ void menuAdmin() {
         }
         else if (choice == 2) {
             system("cls");
-            add(list);
+            m.add(list);
+            system("cls");
         }
         else if (choice == 3) {
             system("cls");
-            remove(list);
+            m.remove(list);
+            system("cls");
         }
         else if (choice == 4) {
-            update(list);
+            m.update(list);
+            system("cls");
 
         }
         else if (choice == 5) {
@@ -67,6 +69,7 @@ void menuAdmin() {
             st = dynamic_cast<Staff*>(current);
             st->createAdminAccount(people);
             writePeopleToFile(people);
+            system("cls");
 
         }
         else if (choice == 6) {
@@ -75,23 +78,24 @@ void menuAdmin() {
 
         }
         else if (choice == 7) {
-            do{
-            system("cls");
-            int x = 75; int y = 15;
-            st = dynamic_cast<Staff*>(current);
-            box(x - 10, y - 2, 50, 22, 11, 1, "\033[31m INFORMATION ");
-            st->print_info(x, y);
-            vector<string> chooice_ = { "Change password","Change all informations" ,"Go back" };
-            showMainMenu(5, 40, 40, 2, chooice_);
-            int choice = (whereY() - 40) / 2;
+            do {
+                system("cls");
+                int x = 75; int y = 15;
+                st = dynamic_cast<Staff*>(current);
+                box(x - 10, y - 2, 50, 22, 11, 1, "\033[31m INFORMATION ");
+                st->print_info(x, y);
+                vector<string> chooice_ = { "Change password","Change all informations" ,"Go back" };
+                printMenuOptions(5, 40, 40, 2, chooice_);
+                int choice = (whereY() - 40) / 2;
                 if (choice == 0) {
                     system("cls");
-                    changePass(100, 25);
+                    ac.changePass(100, 25);
                 }
                 else if (choice == 1) {
                     system("cls");
                     current->input(people);
                     writePeopleToFile(people);
+                    system("cls");
                 }
                 else {
                     system("cls");
@@ -99,15 +103,15 @@ void menuAdmin() {
                 }
 
             } while (1);
-           
 
-           
+
+
         }
         else if (choice == 8) {
             system("cls");
             box(75, 25, 50, 2, 2, 1, "Confirm log out. [Y/N]: ");
             char key_out = _getch();
-            if (key_out == 'y'|| key_out == 'Y') {
+            if (key_out == 'y' || key_out == 'Y') {
                 system("cls");
                 break;
             }
@@ -116,13 +120,13 @@ void menuAdmin() {
     }
 }
 
-  /* std::vector<std::string> choice_a = {"Display main functions",
-                                        "All manga titles",
-                                        "Search",
-                                        "View/Edit account information",
-                                        "Help",
-                                        "About",
-                                        "Save & Log out" };*/
+/* std::vector<std::string> choice_a = {"Display main functions",
+                                      "All manga titles",
+                                      "Search",
+                                      "View/Edit account information",
+                                      "Help",
+                                      "About",
+                                      "Save & Log out" };*/
 
 
 
@@ -130,36 +134,36 @@ void menuAdmin() {
 
 
 void menuUser() {
-    ShowCur(0);
     while (1) {
-        std::vector<std::string> choice_a = {   "All manga titles",
+        ShowCur(0);
+        std::vector<std::string> choice_a = { "All manga titles",
                                                 "Search",
                                                 "View/Edit account information",
                                                 "Help",
                                                 "About",
-                                                "Save & Log out" };                                      
+                                                "Save & Log out" };
         int x = 75, y = 15;
         int w = 50;
         int h = 2;
-        showMainMenu(x, y, w, h, choice_a);
+        printMenuOptions(x, y, w, h, choice_a);
         int choice = (whereY() - y) / 2;
         if (choice == 0) {
             // Show danh sách
             int startIndex = 0;
             int pageSize = 10;
-            showList(list, 25, 10, 160, 35, startIndex, pageSize);
+            m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
             char keyP;
             keyP = _getch();
             do {
                 if (keyP == 77 && startIndex < list.size()) { // Mui tên ph?i
                     startIndex += pageSize;
                     clearRectangle(32, 13, 50, 30);
-                    showList(list, 25, 10, 160, 35, startIndex, pageSize);
+                    m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
                 }
                 else if (keyP == 75 && startIndex > 0) { // Mui tên trái
                     startIndex -= pageSize;
                     clearRectangle(32, 13, 50, 30);
-                    showList(list, 25, 10, 160, 35, startIndex, pageSize);
+                    m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
                 }
                 keyP = _getch();
 
@@ -178,11 +182,11 @@ void menuUser() {
                 box(x - 10, y - 2, 50, 22, 11, 1, "\033[31m INFORMATION ");
                 current->print_info(x, y);
                 vector<string> chooice_ = { "Change password","Change all informations" ,"Go back" };
-                showMainMenu(5, 40, 40, 2, chooice_);
+                printMenuOptions(5, 40, 40, 2, chooice_);
                 int choice = (whereY() - 40) / 2;
                 if (choice == 0) {
                     system("cls");
-                    changePass(100, 25);
+                    ac.changePass(100, 25);
                 }
                 else if (choice == 1) {
                     system("cls");
@@ -217,7 +221,7 @@ void menuUser() {
                 break;
             }
         }
-        
+
     }
 
 }
@@ -234,25 +238,25 @@ void menuStudent() {
         int x = 75, y = 15;
         int w = 50;
         int h = 2;
-        showMainMenu(x, y, w, h, choice_a);
+        printMenuOptions(x, y, w, h, choice_a);
         int choice = (whereY() - y) / 2;
         if (choice == 0) {
             // Show danh sách
             int startIndex = 0;
             int pageSize = 10;
-            showList(list, 25, 10, 160, 35, startIndex, pageSize);
+            m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
             char keyP;
             keyP = _getch();
             do {
                 if (keyP == 77 && startIndex < list.size()) { // Mui tên ph?i
                     startIndex += pageSize;
                     clearRectangle(32, 13, 50, 30);
-                    showList(list, 25, 10, 160, 35, startIndex, pageSize);
+                    m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
                 }
                 else if (keyP == 75 && startIndex > 0) { // Mui tên trái
                     startIndex -= pageSize;
                     clearRectangle(32, 13, 50, 30);
-                    showList(list, 25, 10, 160, 35, startIndex, pageSize);
+                    m.showList(list, 25, 10, 160, 35, startIndex, pageSize);
                 }
                 keyP = _getch();
 
@@ -271,11 +275,11 @@ void menuStudent() {
                 box(x - 10, y - 2, 50, 30, 11, 1, "\033[31m INFORMATION ");
                 current->print_info(x, y);
                 vector<string> chooice_ = { "Change password","Change all informations" ,"Go back" };
-                showMainMenu(5, 40, 40, 2, chooice_);
+                printMenuOptions(5, 40, 40, 2, chooice_);
                 int choice = (whereY() - 40) / 2;
                 if (choice == 0) {
                     system("cls");
-                    changePass(100, 25);
+                    ac.changePass(100, 25);
                 }
                 else if (choice == 1) {
                     system("cls");
@@ -316,14 +320,14 @@ void menuStudent() {
 }
 
 
-void showMainMenu(int x,int y,int w,int h,const std::vector<std::string>& nds){
-    
+void printMenuOptions(int x, int y, int w, int h, const std::vector<std::string>& nds) {
+
     int t_color = 11;
     int b_color = 1;
     int b_color_sang = 75;
-    int sl = nds.size(); // Sử dụng phương thức size() thay vì sizeof() để lấy số lượng phần tử trong vector
-   
-    box(x, y-3, w, h, t_color, b_color, "============MENU============");
+    int sl = nds.size();
+
+    box(x, y - 3, w, h, t_color, b_color, "============MENU============");
     n_box(x, y, w, h, t_color, b_color, nds);
 
     int xp = x, yp = y; // Tọa độ của thanh sáng
@@ -331,8 +335,7 @@ void showMainMenu(int x,int y,int w,int h,const std::vector<std::string>& nds){
     bool kt = true;
     bool check = true;
     while (check) {
-        // In thanh sáng mới khi cần
-       
+        // In thanh sáng mới khi cần    
         if (kt == true) {
             // Xóa thanh sáng cũ
             gotoXY(xcu, ycu);
@@ -346,7 +349,6 @@ void showMainMenu(int x,int y,int w,int h,const std::vector<std::string>& nds){
             SetConsoleTextAttribute(hConsole, 0);
             kt = false;
         }
-
         // Kiểm tra phím nhấn
         if (_kbhit()) {
             char c = _getch();
@@ -367,10 +369,7 @@ void showMainMenu(int x,int y,int w,int h,const std::vector<std::string>& nds){
                 check = false;
             }
         }
-
-        // Tốc độ
     }
-
 }
 
 
@@ -393,7 +392,7 @@ void menuSearch() {
     box_hien_thi_list(1, 15, 160, 35, 1, 1, "");
     while (1) {
         ShowCur(0);
-        showMainMenu(x_, y_, w_, h_, search_for);
+        printMenuOptions(x_, y_, w_, h_, search_for);
         int choice = (whereY() - y_) / 2;
 
         std::vector<Manga> result = list;
@@ -401,9 +400,9 @@ void menuSearch() {
         int startIndex = 0;
         int pageSize = 10;
         bool show_all_list = true;
-        
-        if (choice == 0 || choice == 1 ||choice == 2 || choice == 3 || choice == 4) {
-            box(19, 7, 100, 2, 23, 1, " search");
+
+        if (choice == 0 || choice == 1 || choice == 2 || choice == 3 || choice == 4) {
+            box(19, 7, 100, 2, 23, 1, " ");
             if (choice == 0)
                 result = searchbyName(result);
             if (choice == 1)
@@ -416,19 +415,19 @@ void menuSearch() {
                 result = searchbyYear(result);
 
             ShowCur(0);
-            showList(result, x, y, w, h, startIndex, pageSize);
+            m.showList(result, x, y, w, h, startIndex, pageSize);
             keyPress = _getch();
             do {
                 gotoXY(20, 10);std::cout << "                                                                          ";
                 if (keyPress == 77 && startIndex < list.size()) { // Mui tên phải
-                    startIndex+= pageSize;
+                    startIndex += pageSize;
                     clearRectangle(x + 2, y + 3, w - 10, 30);
-                    showList(result, x, y, w, h, startIndex, pageSize);
+                    m.showList(result, x, y, w, h, startIndex, pageSize);
                 }
                 else if (keyPress == 75 && startIndex > 0) { // Mũi tên trái
-                    startIndex-= pageSize;
-                    clearRectangle(x+2, y+3, w-10, 30);
-                    showList(result, x, y, w, h, startIndex, pageSize);
+                    startIndex -= pageSize;
+                    clearRectangle(x + 2, y + 3, w - 10, 30);
+                    m.showList(result, x, y, w, h, startIndex, pageSize);
                 }
                 keyPress = _getch();
             } while (keyPress != 27);
@@ -436,17 +435,17 @@ void menuSearch() {
         else if (choice == 5) {
             // Hiển thị danh sách
             char key_Press = _getch();
-            showList(list, x, y, w, h, startIndex, pageSize);
+            m.showList(list, x, y, w, h, startIndex, pageSize);
             do {
                 if (key_Press == 77 && startIndex < list.size()) { // Mũi tên phải
                     ++startIndex;
-                    clearRectangle(x + 2, y + 3, w - 10, 30);
-                    showList(list, x, y, w, h, startIndex, pageSize);
+                    clearRectangle(x + 2, y + 3, 154, 30);
+                    m.showList(list, x, y, w, h, startIndex, pageSize);
                 }
                 else if (key_Press == 75 && startIndex > 0) { // Mũi tên trái
                     --startIndex;
-                    clearRectangle(x + 2, y + 3, w - 10, 30);
-                    showList(list, x, y, w, h, startIndex, pageSize);
+                    clearRectangle(x + 2, y + 3, 154, 30);
+                    m.showList(list, x, y, w, h, startIndex, pageSize);
                 }
                 key_Press = _getch();
             } while (key_Press != 27);
@@ -456,17 +455,17 @@ void menuSearch() {
 }
 
 void menuViewAccount() {
-    std::vector<std::string> choice_a = {       "User",
+    std::vector<std::string> choice_a = { "User",
                                                 "Student",
                                                 "Staff",
                                                 "Cancel" };
     int x = 5, y = 40;
     int w = 30;
     int h = 2;
-    showMainMenu(x, y, w, h, choice_a);
+    printMenuOptions(x, y, w, h, choice_a);
     int choice = (whereY() - y) / 2;
     auto st = dynamic_cast<Staff*>(current);
-    
+
     if (choice == 0) {
         int x = 1;int y = 1; int w = 150; int h = 35;
         int startIndex = 0;
@@ -504,7 +503,7 @@ void menuViewAccount() {
             }
             else if (keyP == 75 && startIndex > 0) { // Mui tên trái
                 startIndex -= pageSize;
-                clearRectangle(x+1, y+1, w-2, h-2);
+                clearRectangle(x + 1, y + 1, w - 2, h - 2);
                 printStudentAll(people, x, y, w, h, startIndex, pageSize);
             }
             keyP = _getch();
@@ -539,17 +538,17 @@ void menuViewAccount() {
 }
 
 void editInformation() {
-    std::vector<std::string> choice_a = {       "Change All Information",
+    std::vector<std::string> choice_a = { "Change All Information",
                                                 "Change Pass Word",
-                                                "Cancel"};                                               
+                                                "Cancel" };
     int x = 150; int y = 4; int w = 40;int h = 2;
-    showMainMenu(x,y,w,h, choice_a);
+    printMenuOptions(x, y, w, h, choice_a);
     int choice = (whereY() - y);
     if (choice == 0) {
         int x_t = 80;int y_t = 15;
-        box(x - 5, y - 2, 50, 2,8, 5, " ");
+        box(x - 5, y - 2, 50, 2, 8, 5, " ");
         current->print_info(x_t, y_t);
 
     }
-    
+
 }

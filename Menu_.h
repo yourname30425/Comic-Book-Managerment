@@ -7,7 +7,7 @@
 #include <conio.h>
 
 
- // Global
+// Global
 extern vector<Person*> people;
 extern Person* current;// Vector to store Person* objects // Global
 
@@ -22,7 +22,7 @@ void menuUser();
 
 void menuStudent();
 
-void showMainMenu(int x, int y, int w, int h, const std::vector<  std::string>& nds);
+void printMenuOptions(int x, int y, int w, int h, const std::vector<  std::string>& nds);
 
 void menuSearch();
 

@@ -7,8 +7,12 @@
 #include "windows.h"
 
 
-//======= lấy tọa độ x của con trỏ hiện tại =============
+
 #define KEY_NONE	-1
+
+void setConsoleSize(int columns, int rows);
+
+//======= lấy tọa độ x của con trỏ hiện tại =============
 int whereX();
 //========= lấy tọa độ y của con trỏ hiện tại =======
 int whereY();
@@ -23,10 +27,11 @@ int inputKey();
 //======= chuyển đổi màu sắc của text =========
 void textcolor(int x);
 
+
 std::string lowercase(const std::string& str);
 
 
-void thanh_sang(int x, int y, int w, int h, int b_color,std::string nd);
+void thanh_sang(int x, int y, int w, int h, int b_color, std::string nd);
 
 void box(int x, int y, int w, int h, int t_color, int b_color, std::string nd);
 
@@ -39,6 +44,7 @@ void setFullscreen();
 void clearRectangle(int x1, int y1, int x2, int y2);
 
 void clearConsoleLine(const std::string& nds);
+
 
 
 

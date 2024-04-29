@@ -3,12 +3,16 @@
 #include "Student.h"
 #include "Staff.h"
 
-extern Person* current ;
+extern Person* current;
 
-void createAccount(vector<Person*>& people);
-void changePass(int x, int y);
+class AccountManager
+{
+public:
+	void createAccount(vector<Person*>& people);
+	void changePass(int x, int y);
+	void asterisk(string& pass);
+	void login(vector<Person*>& people);
+	void start(vector<Person*>& people);
 
-void asterisk(string& pass);
+};
 
-void login(vector<Person*>& people);
-void start(vector<Person*>& people);

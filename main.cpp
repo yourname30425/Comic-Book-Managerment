@@ -12,25 +12,13 @@
 
 
 const int MAX_COLUMS_SCREEM = 250;
-const int MAX_ROWS_SCREEM = 50;
+const int MAX_ROWS_SCREEM = 55;
 
 vector<Person*> people; // Vector to store Person* objects // Global
 std::vector<Manga> list;
 Person* current = nullptr; // Global
-
-
-void setConsoleSize(int columns, int rows) {
-	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-	SMALL_RECT rect = { 0, 0, static_cast<SHORT>(columns - 1), static_cast<SHORT>(rows - 1) };
-	SetConsoleWindowInfo(hConsole, TRUE, &rect);
-	COORD size = { static_cast<SHORT>(columns), static_cast<SHORT>(rows) };
-	SetConsoleScreenBufferSize(hConsole, size);
-}
-
-
-
-
 extern void menuAdmin();
+AccountManager ac;
 
 
 int main() {
@@ -38,8 +26,11 @@ int main() {
 		readfile(list);
 		readfile(people);
 		setConsoleSize(MAX_COLUMS_SCREEM, MAX_ROWS_SCREEM);
-		printCapybara();
-		start(people);
+		system("cls");
+		printCapybara("t_totoro.txt");
+		gotoXY(0, 0);
+		printCapybara("capybara.txt");
+		ac.start(people);
 		if (current->type == "Staff") {
 			menuAdmin();
 		}
@@ -48,10 +39,10 @@ int main() {
 		}
 		else menuUser();
 		//printStudentAll(people,1,1,150,40,0,5);
-		
-	}		
+
+	}
 }
-	
+
 
 
 

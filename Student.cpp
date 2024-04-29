@@ -8,7 +8,7 @@ Student::Student() {
     string class_name = "";
     string cohort = "";
     string school = "";
-    string type = "Student";
+    type = "Student";
 }
 
 string Student::getStudentID() {

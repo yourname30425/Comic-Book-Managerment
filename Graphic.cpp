@@ -3,6 +3,15 @@
 
 
 using namespace std;
+
+void setConsoleSize(int columns, int rows) {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+	SMALL_RECT rect = { 0, 0, static_cast<SHORT>(columns - 1), static_cast<SHORT>(rows - 1) };
+	SetConsoleWindowInfo(hConsole, TRUE, &rect);
+	COORD size = { static_cast<SHORT>(columns), static_cast<SHORT>(rows) };
+	SetConsoleScreenBufferSize(hConsole, size);
+}
+
 int whereX()
 {
 	CONSOLE_SCREEN_BUFFER_INFO csbi;
@@ -71,6 +80,8 @@ int inputKey()
 	return KEY_NONE;
 }
 
+
+
 void textcolor(int x)
 {
 	HANDLE mau;
@@ -87,8 +98,6 @@ std::string lowercase(const std::string& str) {
 	}
 	return result;
 }
-
-
 
 
 
@@ -118,7 +127,7 @@ void box(int x, int y, int w, int h, int t_color, int b_color, string nd)
 		}
 	}
 	SetColor(7);
-	gotoXY(x + (w-nd.length())/2, y + 1);
+	gotoXY(x + (w - nd.length()) / 2, y + 1);
 	cout << nd;
 	//============= ve vien =============
 	textcolor(1);
@@ -147,7 +156,7 @@ void box(int x, int y, int w, int h, int t_color, int b_color, string nd)
 
 
 
-void n_box(int x, int y, int w, int h, int t_color, int b_color,const vector<string>& nds) {
+void n_box(int x, int y, int w, int h, int t_color, int b_color, const vector<string>& nds) {
 	int sl = nds.size();
 	for (int i = 0; i < sl; ++i) {
 		box(x, y + (i * 2), w, h, t_color, b_color, nds[i]);
@@ -158,10 +167,10 @@ void n_box(int x, int y, int w, int h, int t_color, int b_color,const vector<str
 	}
 }
 
-void box_hien_thi_list(int x,int y, int w, int h, int t_color, int b_color, string nds)
+void box_hien_thi_list(int x, int y, int w, int h, int t_color, int b_color, string nds)
 {
 	box(x, y, w, h, t_color, b_color, "");
-	gotoXY(x+3, y+1);
+	gotoXY(x + 3, y + 1);
 	std::cout << std::setfill(' ');
 	std::cout << std::setw(2) << std::left << "" << "| ";
 	std::cout << "\033[31m" << std::setw(50) << std::left << "Title";
@@ -169,7 +178,7 @@ void box_hien_thi_list(int x,int y, int w, int h, int t_color, int b_color, stri
 	std::cout << "\033[33m" << std::setw(30) << std::left << "Author";
 	std::cout << "\033[34m" << std::setw(15) << std::left << "Date released";
 	std::cout << "\033[35m" << std::setw(5) << std::right << "Rating" << std::endl << "\033[0m";
-	gotoXY(x+3,y +2);
+	gotoXY(x + 3, y + 2);
 	std::cout << std::setfill('-') << std::setw(147) << "-" << std::endl;
 }
 
@@ -181,19 +190,24 @@ void setFullscreen() {
 	ShowWindow(hwnd, SW_SHOWMAXIMIZED); // Hiển thị fullscreen
 }
 
+#include <iostream>
+#include <Windows.h>
+
 void clearRectangle(int x1, int y1, int x2, int y2) {
-	COORD topLeft = { x1, y1 };
-	COORD bottomRight = { x2, y2 };
+	COORD topLeft = { static_cast<SHORT>(x1), static_cast<SHORT>(y1) };
+	COORD bottomRight = { static_cast<SHORT>(x2), static_cast<SHORT>(y2) };
 
-	CONSOLE_SCREEN_BUFFER_INFO screen;
 	HANDLE console = GetStdHandle(STD_OUTPUT_HANDLE);
-
-	GetConsoleScreenBufferInfo(console, &screen);
+	CONSOLE_SCREEN_BUFFER_INFO screen;
+	if (!GetConsoleScreenBufferInfo(console, &screen)) {
+		std::cerr << "Error getting screen buffer info." << std::endl;
+		return;
+	}
 
 	DWORD written;
-	FillConsoleOutputCharacter(console, ' ', (screen.dwSize.X * screen.dwSize.Y), topLeft, &written);
-	FillConsoleOutputAttribute(console, FOREGROUND_GREEN | FOREGROUND_RED | FOREGROUND_BLUE, (screen.dwSize.X * screen.dwSize.Y), topLeft, &written);
-
+	DWORD rectSize = (x2 - x1) * (y2 - y1);
+	FillConsoleOutputCharacter(console, ' ', rectSize, topLeft, &written);
+	FillConsoleOutputAttribute(console, screen.wAttributes, rectSize, topLeft, &written);
 	SetConsoleCursorPosition(console, topLeft);
 }
 

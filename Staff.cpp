@@ -78,13 +78,14 @@ void Staff::createAdminAccount(vector<Person*>& people) {
     int x = 5, y = 40;
     int w = 30;
     int h = 2;
-    showMainMenu(x, y, w, h, choice_a);
+    printMenuOptions(x, y, w, h, choice_a);
     int choice = (whereY() - y) / 2;
     if (choice == 0) {
         Person* ptr = new Person();
         ptr->input(people);
         people.push_back(ptr);
         gotoXY(55, 35);std::cout << "Successful!" << endl;
+        
 
     }
     else if (choice == 1) {
@@ -103,6 +104,8 @@ void Staff::createAdminAccount(vector<Person*>& people) {
         system("cls");
         return;
     }
+    _getch();
+    system("cls");
 }
 
 
