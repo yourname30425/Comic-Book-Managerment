@@ -27,26 +27,25 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -71,8 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>D:\SDL2-devel-2.30.0-VC\SDL2-2.30.0\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\SDL2-devel-2.30.0-VC\SDL2-2.30.0\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -132,29 +130,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Account.cpp" />
-    <ClCompile Include="file_handling.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="MangaManager.cpp" />
-    <ClCompile Include="Menu_.cpp" />
-    <ClCompile Include="Person.cpp" />
-    <ClCompile Include="Graphic.cpp" />
-    <ClCompile Include="Search.cpp" />
-    <ClCompile Include="Staff.cpp" />
-    <ClCompile Include="Student.cpp" />
-    <ClCompile Include="textProcessor.cpp" />
+    <ClCompile Include="src\Account.cpp" />
+    <ClCompile Include="src\file_handling.cpp" />
+    <ClCompile Include="src\Graphic.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MangaManager.cpp" />
+    <ClCompile Include="src\Menu_.cpp" />
+    <ClCompile Include="src\Person.cpp" />
+    <ClCompile Include="src\Search.cpp" />
+    <ClCompile Include="src\Staff.cpp" />
+    <ClCompile Include="src\Student.cpp" />
+    <ClCompile Include="src\textProcessor.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Account.h" />
-    <ClInclude Include="file_handling.h" />
-    <ClInclude Include="MangaManager.h" />
-    <ClInclude Include="Menu_.h" />
-    <ClInclude Include="Person.h" />
-    <ClInclude Include="Graphic.h" />
-    <ClInclude Include="Search.h" />
-    <ClInclude Include="Staff.h" />
-    <ClInclude Include="Student.h" />
-    <ClInclude Include="textProcessor.h" />
+    <ClInclude Include="src\Account.h" />
+    <ClInclude Include="src\file_handling.h" />
+    <ClInclude Include="src\Graphic.h" />
+    <ClInclude Include="src\MangaManager.h" />
+    <ClInclude Include="src\Menu_.h" />
+    <ClInclude Include="src\Person.h" />
+    <ClInclude Include="src\Search.h" />
+    <ClInclude Include="src\Staff.h" />
+    <ClInclude Include="src\Student.h" />
+    <ClInclude Include="src\textProcessor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

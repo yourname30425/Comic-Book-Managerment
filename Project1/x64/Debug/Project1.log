@@ -1,3 +1,25 @@
-﻿  Menu_.cpp
-D:\Comic-Book-Managerment\Menu_.cpp(328,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+﻿  Account.cpp
+  file_handling.cpp
+  Graphic.cpp
+D:\Comic-Book-Managerment\src\Graphic.cpp(34,26): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\Comic-Book-Managerment\src\Graphic.cpp(34,29): warning C4838: conversion from 'int' to 'SHORT' requires a narrowing conversion
+D:\Comic-Book-Managerment\src\Graphic.cpp(115,11): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Comic-Book-Managerment\src\Graphic.cpp(130,11): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+D:\Comic-Book-Managerment\src\Graphic.cpp(160,9): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  main.cpp
+  MangaManager.cpp
+D:\Comic-Book-Managerment\src\MangaManager.cpp(33,5): warning C4834: discarding return value of function with [[nodiscard]] attribute
+D:\Comic-Book-Managerment\src\MangaManager.cpp(103,5): warning C4834: discarding return value of function with [[nodiscard]] attribute
+D:\Comic-Book-Managerment\src\MangaManager.cpp(181,10): warning C4834: discarding return value of function with [[nodiscard]] attribute
+  Menu_.cpp
+D:\Comic-Book-Managerment\src\Menu_.cpp(328,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Person.cpp
+D:\Comic-Book-Managerment\src\Person.cpp(103,5): warning C4834: discarding return value of function with [[nodiscard]] attribute
+  Search.cpp
+  Staff.cpp
+D:\Comic-Book-Managerment\src\Staff.cpp(51,5): warning C4834: discarding return value of function with [[nodiscard]] attribute
+  Student.cpp
+D:\Comic-Book-Managerment\src\Student.cpp(63,5): warning C4834: discarding return value of function with [[nodiscard]] attribute
+  textProcessor.cpp
+  Generating Code...
   Project1.vcxproj -> D:\Comic-Book-Managerment\x64\Debug\Project1.exe

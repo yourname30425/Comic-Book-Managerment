@@ -1,10 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
-    </Filter>
     <Filter Include="Header Files">
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
@@ -12,71 +8,75 @@
     <Filter Include="Font">
       <UniqueIdentifier>{e70c2a45-cd02-4db6-9981-91430b90c810}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
+    <ClCompile Include="src\Person.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Person.cpp">
+    <ClCompile Include="src\Search.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MangaManager.cpp">
+    <ClCompile Include="src\Staff.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Menu_.cpp">
+    <ClCompile Include="src\Student.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Account.cpp">
+    <ClCompile Include="src\textProcessor.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Graphic.cpp">
+    <ClCompile Include="src\Account.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Search.cpp">
+    <ClCompile Include="src\file_handling.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Student.cpp">
+    <ClCompile Include="src\Graphic.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Staff.cpp">
+    <ClCompile Include="src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="file_handling.cpp">
+    <ClCompile Include="src\MangaManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="textProcessor.cpp">
+    <ClCompile Include="src\Menu_.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Person.h">
+    <ClInclude Include="src\Account.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MangaManager.h">
+    <ClInclude Include="src\file_handling.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Menu_.h">
+    <ClInclude Include="src\Graphic.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Account.h">
+    <ClInclude Include="src\MangaManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Graphic.h">
+    <ClInclude Include="src\Menu_.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Search.h">
+    <ClInclude Include="src\Person.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Student.h">
+    <ClInclude Include="src\Search.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Staff.h">
+    <ClInclude Include="src\Staff.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="file_handling.h">
+    <ClInclude Include="src\Student.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="textProcessor.h">
+    <ClInclude Include="src\textProcessor.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
