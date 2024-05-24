@@ -1,5 +1,0 @@
-﻿  Account.cpp
-  Menu_.cpp
-D:\Comic-Book-Managerment\src\Menu_.cpp(328,12): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  Generating Code...
-  Project1.vcxproj -> D:\Comic-Book-Managerment\x64\Debug\Project1.exe
