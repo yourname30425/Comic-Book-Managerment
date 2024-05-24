@@ -17,13 +17,16 @@ void AccountManager::createAccount(vector<Person*>& people) {
 		ptr->input(people);
 		people.push_back(ptr);
 		gotoXY(55, 35);cout << "Successful!" << endl;
-
+		system("pause");
+		system("cls");
 	}
 	else if (choice == 1) {
 		Student* ptr = new Student();
 		ptr->input(people);
 		people.push_back(ptr);
-		cout << "Successful!" << endl;
+		gotoXY(55, 40);cout << "Successful!" << endl;
+		system("pause");
+		system("cls");
 	}
 	else return;
 

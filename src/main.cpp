@@ -38,7 +38,8 @@ int main() {
 			menuStudent();
 		}
 		else menuUser();
-		//printStudentAll(people,1,1,150,40,0,5);
+		writePeopleToFile(people);
+		writeMangaToFile(list);
 
 	}
 }

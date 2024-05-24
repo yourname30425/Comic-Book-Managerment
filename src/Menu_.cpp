@@ -326,7 +326,7 @@ void printMenuOptions(int x, int y, int w, int h, const std::vector<std::string>
     int b_color = 1;
     int b_color_sang = 75;
     int sl = nds.size();
-
+    ShowCur(0);
     box(x, y - 3, w, h, t_color, b_color, "============MENU============");
     n_box(x, y, w, h, t_color, b_color, nds);
 
