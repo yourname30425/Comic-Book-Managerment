@@ -19,8 +19,8 @@ Comic Book Management is a comprehensive tool for organizing and managing your c
   cd Comic-Book-Managerment
    ```
 3. Start Project:
-   ```bash
-     .\\Project
+   ``` bash
+     .\Project
    ```
 
 
