@@ -15,14 +15,21 @@ Comic Book Management is a comprehensive tool for organizing and managing your c
    ``` bash
    git clone https://github.com/yourname30425/Comic-Book-Managerment.git
    ```
+   
 2.Navigate to the project directory:
    ``` bash
   cd Comic-Book-Managerment
    ```
+
 3. Start Project:
-   ``` bash
-     .\Project
-   ```
+   - On Unix-like systems (Linux, macOS):   
+      ``` bash
+        ./Project
+      ```
+   - On Windows:  
+      ``` bash
+        .\Project
+      ```
    
 ## How to Use
 
