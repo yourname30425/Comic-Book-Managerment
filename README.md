@@ -29,7 +29,7 @@ Comic Book Management is a comprehensive tool for organizing and managing your c
 ### Main Screen
 
 After launching the manga management project, the main screen will display three options: "Log In", "Create New Account", and "Exit".
-[google](https://bmeelearning.wordpress.com/wp-content/uploads/2024/04/92a00845-8f4a-4901-83a7-ec0897db98f8.jpg)
+![google](https://bmeelearning.wordpress.com/wp-content/uploads/2024/04/92a00845-8f4a-4901-83a7-ec0897db98f8.jpg)
 - **Log In**: To log in, press the `Enter` key. When you press `Enter`, the system will take you to the login screen where you need to enter your username and password. After entering your credentials, press `Enter` again to confirm.
 - **Create New Account**: To create a new account, press the `Space` key. When you press `Space`, the system will take you to the account creation screen where you need to enter the necessary information to create a new account such as username, password, and email. Press `Enter` to complete the account creation process.
 - **Exit**: To exit the application, press the `Esc` key. When you press `Esc`, the application will close and you will return to your operating system's desktop.
@@ -37,7 +37,6 @@ After launching the manga management project, the main screen will display three
 ### Function Screen
 
 After successfully logging in, the screen will display the main functions for you to choose from. These functions may include:
-
 - **Show Manga**: Display a list of manga available in the system.
 - **Add New Manga**: Add a new manga to the database.
 - **Delete Manga**: Remove a manga from the collection.
@@ -51,6 +50,7 @@ You can use the `Up`, `Down`, `Left`, and `Right` arrow keys to navigate between
 
 - **Select Function**: When you move to the function you want to use, press the `Enter` key to select that function. For example, if you want to add a new manga, move to "Add New Manga" and press `Enter`.
 - **Go Back**: If you want to go back to the previous screen or exit the function screen, press the `Esc` key.
+
 We hope you have a great experience managing your manga collection with our application! If you encounter any issues or need further assistance, please feel free to contact our support team.
 
 
