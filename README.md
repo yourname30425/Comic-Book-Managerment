@@ -2,7 +2,7 @@
 
 ## Overview
 Comic Book Management is a comprehensive tool for organizing and managing your comic book collection. This project provides a user-friendly interface to catalog comic books, track reading progress, and maintain detailed records of your collection.
-[google](https://bmeelearning.wordpress.com/wp-content/uploads/2024/03/d80550a1-552e-4a35-a02b-cd8de996c21a.jpg)
+![google](https://bmeelearning.wordpress.com/wp-content/uploads/2024/03/d80550a1-552e-4a35-a02b-cd8de996c21a.jpg)
 
 ## Features
 - **Add Comic Books**: Enter details such as title, author, genre, and publication date.
@@ -45,6 +45,8 @@ After successfully logging in, the screen will display the main functions for yo
 - **View Registered Accounts**: See a list of all registered user accounts.
 - **View/Change Information**: Access and edit personal account information.
 - **Save and Logout**: Preserve current session data and log out of the system.
+
+### Key
   
 You can use the `Up`, `Down`, `Left`, and `Right` arrow keys to navigate between the function options.
 
