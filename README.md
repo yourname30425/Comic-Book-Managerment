@@ -24,11 +24,11 @@ Comic Book Management is a comprehensive tool for organizing and managing your c
 3. Start Project:
 - On Unix-like systems (Linux, macOS):   
    ``` bash
-     ./Project
+     ./Project1
    ```
 - On Windows:  
    ``` bash
-     .\Project
+     .\Project1
    ```
    
 ## How to Use
